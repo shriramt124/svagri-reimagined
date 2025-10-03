@@ -7,8 +7,10 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -29,10 +31,10 @@ const Contact = () => {
       <section className="pt-32 pb-20 bg-gradient-to-b from-secondary to-background">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-display font-bold mb-6">
-            Contact Us
+            {t("contact.title")}
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Get in touch with our team for any inquiries or assistance
+            {t("contact.subtitle")}
           </p>
         </div>
       </section>
@@ -41,58 +43,58 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
             <div>
-              <h2 className="text-3xl font-display font-bold mb-6">Send us a Message</h2>
+              <h2 className="text-3xl font-display font-bold mb-6">{t("contact.sendMessage")}</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label className="block text-sm font-medium mb-2">Name</label>
+                  <label className="block text-sm font-medium mb-2">{t("contact.name")}</label>
                   <Input
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    placeholder="Your name"
+                    placeholder={t("contact.namePlaceholder")}
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Email</label>
+                  <label className="block text-sm font-medium mb-2">{t("contact.email")}</label>
                   <Input
                     required
                     type="email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    placeholder="your.email@example.com"
+                    placeholder={t("contact.emailPlaceholder")}
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Department</label>
+                  <label className="block text-sm font-medium mb-2">{t("contact.department")}</label>
                   <select
                     className="w-full px-3 py-2 border border-input rounded-md bg-background"
                     value={formData.department}
                     onChange={(e) => setFormData({ ...formData, department: e.target.value })}
                   >
-                    <option>Sales</option>
-                    <option>Purchase</option>
-                    <option>HR</option>
-                    <option>Admin</option>
+                    <option>{t("contact.sales")}</option>
+                    <option>{t("contact.purchase")}</option>
+                    <option>{t("contact.hr")}</option>
+                    <option>{t("contact.admin")}</option>
                   </select>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium mb-2">Message</label>
+                  <label className="block text-sm font-medium mb-2">{t("contact.message")}</label>
                   <Textarea
                     required
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="Tell us how we can help you"
+                    placeholder={t("contact.messagePlaceholder")}
                     rows={5}
                   />
                 </div>
                 <Button type="submit" className="w-full bg-accent hover:bg-accent/90">
-                  Send Request
+                  {t("contact.sendRequest")}
                 </Button>
               </form>
             </div>
 
             <div className="space-y-6">
-              <h2 className="text-3xl font-display font-bold mb-6">Contact Information</h2>
+              <h2 className="text-3xl font-display font-bold mb-6">{t("contact.contactInfo")}</h2>
               
               <Card>
                 <CardContent className="p-6">
@@ -101,7 +103,7 @@ const Contact = () => {
                       <Mail className="w-6 h-6 text-primary-foreground" />
                     </div>
                     <div>
-                      <h3 className="font-display font-semibold mb-1">Email</h3>
+                      <h3 className="font-display font-semibold mb-1">{t("contact.email")}</h3>
                       <a href="mailto:sales@svagri.co.in" className="text-muted-foreground hover:text-accent">
                         sales@svagri.co.in
                       </a>
@@ -117,7 +119,7 @@ const Contact = () => {
                       <Phone className="w-6 h-6 text-primary-foreground" />
                     </div>
                     <div>
-                      <h3 className="font-display font-semibold mb-1">Phone</h3>
+                      <h3 className="font-display font-semibold mb-1">{t("contact.phone")}</h3>
                       <a href="tel:+918087533304" className="text-muted-foreground hover:text-accent">
                         +91 8087533304
                       </a>
@@ -133,8 +135,8 @@ const Contact = () => {
                       <MapPin className="w-6 h-6 text-primary-foreground" />
                     </div>
                     <div>
-                      <h3 className="font-display font-semibold mb-1">Location</h3>
-                      <p className="text-muted-foreground">Pune, India</p>
+                      <h3 className="font-display font-semibold mb-1">{t("contact.location")}</h3>
+                      <p className="text-muted-foreground">{t("footer.location")}</p>
                     </div>
                   </div>
                 </CardContent>

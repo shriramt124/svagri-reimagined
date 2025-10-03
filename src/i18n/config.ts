@@ -1,4 +1,3 @@
-
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
@@ -132,7 +131,51 @@ const resources = {
           organic: "Organic Certified",
           export: "Export Quality"
         }
-      }
+      },
+      about: {
+        title: "About Us",
+        subtitle: "Transforming the food industry since 2008 with innovative solutions and unmatched expertise",
+        ourStory: "Our Story",
+        ourJourney: "Our Journey",
+        meetTheTeam: "Meet the Team",
+        leadershipSubtitle: "Leadership driving innovation and excellence"
+      },
+      agriSolutions: {
+        title: "Agri Solutions",
+        subtitle: "Find Potatoes All Through the Year",
+        ourServices: "Our Services",
+        comprehensiveSolutions: "Comprehensive Agricultural Solutions",
+        servicesDescription: "We provide end-to-end agricultural solutions from premium quality seeds to supply chain management and expert training."
+      },
+      engineeringSolutions: {
+        title: "Engineering Solutions",
+        subtitle: "The Best Food Engineering Solutions",
+        processLines: "Food Engineering Process Lines & Solutions",
+        processLinesDescription: "State-of-the-art food processing equipment and complete production lines for the modern food industry.",
+        cuttingEdgeTech: "Cutting-Edge Technology",
+        cuttingEdgeTechDesc: "Latest innovations in food processing",
+        completeSolutions: "Complete Solutions",
+        completeSolutionsDesc: "End-to-end processing lines",
+        expertSupport: "Expert Support",
+        expertSupportDesc: "Dedicated technical assistance"
+      },
+      ingredientSolutions: {
+        title: "Ingredient Solutions",
+        subtitle: "Best Ingredients Solutions for your Food Processing",
+        premiumQuality: "Premium Quality",
+        potatoSolutions: "Potato & Ingredient Solutions",
+        solutionsDescription: "High-quality ingredients for all your food processing needs",
+        additionalIngredients: "Additional Ingredients",
+        qualityAssured: "Quality Assured",
+        potatoVarieties: "Potato Varieties",
+        availability: "Availability"
+      },
+      insights: {
+        title: "Insights",
+        subtitle: "Stay updated with the latest industry insights, trends, and best practices"
+      },
+      companyName: "siddhi vinayank agro M. private limited",
+      About: "About"
     }
   },
   hi: {
@@ -203,7 +246,7 @@ const resources = {
       },
       home: {
         aboutTitle: "खाद्य उद्योग के लिए व्यापक कृषि और इंजीनियरिंग समाधान",
-        aboutDescription1: "सिद्धि विनायक एग्रो एम. प्राइवेट लिमिटेड, 2008 में स्थापित, ने कृषि और इंजीनियरिंग पर दोहरे ध्यान के साथ आलू उद्योग को बदल दिया है। इसका कृषि व्यवसाय प्रभाग उन्नत भंडारण समाधान और राष्ट्रव्यापी वितरण नेटवर्क के माध्यम से साल भर प्रोसेस-ग्रेड आलू प्रदान करता है।",
+        aboutDescription1: "सिद्धि विनायक एग्रो एम. प्राइवेट लिमिटेड, 2008 में स्थापित, कृषि और इंजीनियरिंग पर दोहरे ध्यान के साथ आलू उद्योग को बदल दिया है। इसका कृषि व्यवसाय प्रभाग उन्नत भंडारण समाधान और राष्ट्रव्यापी वितरण नेटवर्क के माध्यम से साल भर प्रोसेस-ग्रेड आलू प्रदान करता है।",
         aboutDescription2: "खाद्य इंजीनियरिंग व्यवसाय प्रभाग आलू के चिप्स, भुने हुए नट्स और विभिन्न पफ्ड स्नैक्स जैसे उत्पादों के लिए अत्याधुनिक तकनीक का लाभ उठाते हुए नवीन स्नैक समाधान और भविष्य के खाद्य पदार्थों में विशेषज्ञता रखता है।",
         downloadBrochure: "ब्रोशर डाउनलोड करें",
         transformingAgriculture: "कृषि का रूपांतरण",
@@ -287,7 +330,7 @@ const resources = {
         engineeringExcellence: "अभियांत्रिकी उत्कृष्टता",
         completeFoodProcessing: "संपूर्ण अन्न प्रक्रिया ओळी",
         fromChipsToSnacks: "चिप्स ते स्नॅक्स - आम्ही सर्व बनवतो",
-        engineeringDescription: "चिप्स, फ्रेंच फ्राईज आणि स्नॅक्ससाठी अत्याधुनिक यंत्रसामग्री. 24/7 समर्थनासह टर्नकी उपाय.",
+        engineeringDescription: "चिप्स, फ्रेंच फ्राईज आणि स्नैक्ससाठी अत्याधुनिक यंत्रसामग्री. 24/7 समर्थनासह टर्नकी उपाय.",
         viewSolutions: "उपाय पहा",
         requestDemo: "डेमोची विनंती करा",
         qualityIngredients: "गुणवत्ता घटक",
@@ -378,7 +421,7 @@ const resources = {
           testimonial2: {
             name: "सुरेश कुमार",
             location: "गुजरात",
-            text: "एसव्ही अॅग्रीसोबत भागीदारी करणे हा माझा सर्वोत्तम निर्णय होता. ते केवळ गुणवत्तेचे बियाणे पुरवत नाहीत तर माझ्या उत्पादनासाठी चांगले खरेदीदार देखील सुनिश्चित करतात."
+            text: "एसवी अॅग्रीसोबत भागीदारी करणे हा माझा सर्वोत्तम निर्णय होता. ते केवळ गुणवत्तेचे बियाणे पुरवत नाहीत तर माझ्या उत्पादनासाठी चांगले खरेदीदार देखील सुनिश्चित करतात."
           },
           testimonial3: {
             name: "मंजूनाथ रेड्डी",
@@ -392,7 +435,51 @@ const resources = {
           organic: "सेंद्रिय प्रमाणित",
           export: "निर्यात गुणवत्ता"
         }
-      }
+      },
+      about: {
+        title: "आमच्याबद्दल",
+        subtitle: "2008 पासून नाविन्यपूर्ण उपाय आणि अतुलनीय कौशल्याने अन्न उद्योगात बदल",
+        ourStory: "आमची कथा",
+        ourJourney: "आमचा प्रवास",
+        meetTheTeam: "टीमला भेटा",
+        leadershipSubtitle: "नावीन्य आणि उत्कृष्टता चालविणारे नेतृत्व"
+      },
+      agriSolutions: {
+        title: "कृषी उपाय",
+        subtitle: "वर्षभर बटाटे मिळवा",
+        ourServices: "आमच्या सेवा",
+        comprehensiveSolutions: "सर्वसमावेशक कृषी उपाय",
+        servicesDescription: "आम्ही प्रीमियम गुणवत्तेच्या बियाण्यांपासून ते पुरवठा साखळी व्यवस्थापन आणि तज्ञ प्रशिक्षणापर्यंत संपूर्ण कृषी उपाय प्रदान करतो."
+      },
+      engineeringSolutions: {
+        title: "अभियांत्रिकी उपाय",
+        subtitle: "सर्वोत्तम अन्न अभियांत्रिकी उपाय",
+        processLines: "अन्न अभियांत्रिकी प्रक्रिया ओळी आणि उपाय",
+        processLinesDescription: "आधुनिक अन्न उद्योगासाठी अत्याधुनिक अन्न प्रक्रिया उपकरणे आणि संपूर्ण उत्पादन ओळी.",
+        cuttingEdgeTech: "अत्याधुनिक तंत्रज्ञान",
+        cuttingEdgeTechDesc: "अन्न प्रक्रियेतील नवीनतम नवकल्पना",
+        completeSolutions: "संपूर्ण उपाय",
+        completeSolutionsDesc: "संपूर्ण प्रक्रिया ओळी",
+        expertSupport: "तज्ञ समर्थन",
+        expertSupportDesc: "समर्पित तांत्रिक सहाय्य"
+      },
+      ingredientSolutions: {
+        title: "घटक उपाय",
+        subtitle: "तुमच्या अन्न प्रक्रियेसाठी सर्वोत्तम घटक उपाय",
+        premiumQuality: "प्रीमियम गुणवत्ता",
+        potatoSolutions: "बटाटा आणि घटक उपाय",
+        solutionsDescription: "तुमच्या सर्व अन्न प्रक्रिया गरजांसाठी उच्च-गुणवत्तेचे घटक",
+        additionalIngredients: "अतिरिक्त घटक",
+        qualityAssured: "गुणवत्ता खात्रीशीर",
+        potatoVarieties: "बटाटा वाण",
+        availability: "उपलब्धता"
+      },
+      insights: {
+        title: "माहिती",
+        subtitle: "नवीनतम उद्योग अंतर्दृष्टी, ट्रेंड आणि सर्वोत्तम पद्धतींसह अद्ययावत रहा"
+      },
+      companyName: "सिद्धी विनायक अॅग्रो एम. प्रायव्हेट लिमिटेड",
+      About: "बद्दल"
     }
   },
   gu: {
