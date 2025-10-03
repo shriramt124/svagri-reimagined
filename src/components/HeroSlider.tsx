@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Award, TrendingUp, Users, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -9,6 +10,7 @@ import heroIngredients from "@/assets/hero-ingredients.jpg";
 
 const HeroSlider = () => {
   const { t } = useTranslation();
+  const [currentSlide, setCurrentSlide] = useState(0);
   
   const slides = [
     {
@@ -49,9 +51,6 @@ const HeroSlider = () => {
     { icon: TrendingUp, text: `40% ${t('trust.betterYield')}` },
     { icon: Shield, text: t('trust.qualityAssured') },
   ];
-
-const HeroSlider = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
