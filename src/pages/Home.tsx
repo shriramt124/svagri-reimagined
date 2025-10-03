@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Leaf, Cog, Package, Users, Play, Quote, CheckCircle, Award } from "lucide-react";
 import ownerPhoto from "@/assets/owner-photo.jpg";
 import farmVideo from "@/assets/farm-video-thumbnail.jpg";
+import { useTranslation } from "react-i18next";
 
 const services = [
   {
@@ -61,12 +62,14 @@ const certifications = [
 ];
 
 const Home = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen">
       <Navbar />
       <HeroSlider />
       <ChatbotButton />
-      
+
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -116,7 +119,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            
+
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <Leaf className="w-6 h-6 text-accent" />
@@ -161,7 +164,7 @@ const Home = () => {
               </p>
               <p className="text-sm text-muted-foreground italic">- kuldeep singh rathore, Founder</p>
             </div>
-            
+
             <div className="relative h-[500px] rounded-lg overflow-hidden shadow-2xl">
               <img 
                 src={ownerPhoto} 

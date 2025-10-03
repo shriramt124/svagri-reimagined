@@ -60,6 +60,16 @@ const resources = {
         phone: "Phone",
         email: "Email",
         tagline: "Premium Potato Seeds | Engineering Solutions | Year-round Supply"
+      },
+      stats: {
+        yearsExperience: "Years Experience",
+        happyFarmers: "Happy Farmers",
+        potatoVarieties: "Potato Varieties",
+        countries: "Countries Served"
+      },
+      cta: {
+        searchEnds: "Your search for food processing solutions ends here",
+        getStarted: "Get Started Today"
       }
     }
   },
@@ -118,6 +128,16 @@ const resources = {
         phone: "फोन",
         email: "ईमेल",
         tagline: "प्रीमियम आलू के बीज | इंजीनियरिंग समाधान | साल भर आपूर्ति"
+      },
+      stats: {
+        yearsExperience: "वर्षों का अनुभव",
+        happyFarmers: "खुश किसान",
+        potatoVarieties: "आलू की किस्में",
+        countries: "देश सेवित"
+      },
+      cta: {
+        searchEnds: "खाद्य प्रसंस्करण समाधान की आपकी खोज यहीं समाप्त होती है",
+        getStarted: "आज ही शुरू करें"
       }
     }
   },
@@ -176,6 +196,16 @@ const resources = {
         phone: "फोन",
         email: "ईमेल",
         tagline: "प्रीमियम बटाटा बियाणे | अभियांत्रिकी उपाय | वर्षभर पुरवठा"
+      },
+      stats: {
+        yearsExperience: "वर्षांचा अनुभव",
+        happyFarmers: "आनंदी शेतकरी",
+        potatoVarieties: "बटाटा वाण",
+        countries: "देश सेवा"
+      },
+      cta: {
+        searchEnds: "अन्न प्रक्रिया उपायांचा तुमचा शोध येथे संपतो",
+        getStarted: "आजच सुरू करा"
       }
     }
   },
@@ -234,6 +264,16 @@ const resources = {
         phone: "ફોન",
         email: "ઇમેઇલ",
         tagline: "પ્રીમિયમ બટાકાના બીજ | એન્જિનિયરિંગ ઉકેલો | વર્ષભર પુરવઠો"
+      },
+      stats: {
+        yearsExperience: "વર્ષોનો અનુભવ",
+        happyFarmers: "ખુશ ખેડૂતો",
+        potatoVarieties: "બટાકાની જાતો",
+        countries: "દેશો સેવા"
+      },
+      cta: {
+        searchEnds: "ફૂડ પ્રોસેસિંગ સોલ્યુશન્સ માટેની તમારી શોધ અહીં સમાપ્ત થાય છે",
+        getStarted: "આજે જ શરૂ કરો"
       }
     }
   }
