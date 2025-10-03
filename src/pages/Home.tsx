@@ -79,7 +79,7 @@ const Home = () => {
                 Comprehensive Agri and Engineering Solutions for the Food Industry
               </h2>
               <p className="text-muted-foreground mb-4">
-                Siddhi Vinayak Agri Processing Pvt. Ltd., founded in 2008, has transformed the potato industry with its dual focus on agriculture and engineering. Its Agri Business Division provides year-round process-grade potatoes through advanced storage solutions and a nationwide delivery network.
+                siddhi vinayank agro M. private limited, founded in 2008, has transformed the potato industry with its dual focus on agriculture and engineering. Its Agri Business Division provides year-round process-grade potatoes through advanced storage solutions and a nationwide delivery network.
               </p>
               <p className="text-muted-foreground mb-6">
                 The Food Engineering Business Division specializes in innovative snack solutions and future foods, leveraging cutting-edge technology for products like potato chips, roasted nuts, and various puffed snacks.
@@ -151,21 +151,21 @@ const Home = () => {
                 <span className="text-accent font-medium">Our Founder</span>
               </div>
               <h2 className="text-4xl font-display font-bold mb-6">
-                Meet the Visionary Behind SV Agri
+                Meet the Visionary Behind siddhi vinayank agro M. private limited
               </h2>
               <p className="text-muted-foreground mb-4">
-                <strong>Mr. Rajesh Sharma</strong>, Founder & CEO, started his journey in 2008 with a vision to transform Indian agriculture. With over 15 years of experience in agri-business and a deep understanding of farmer challenges, he built SV Agri to bridge the gap between quality seeds and farmers.
+                <strong>Mr. kuldeep singh rathore</strong>, Founder & CEO, started his journey in 2008 with a vision to transform Indian agriculture. With over 15 years of experience in agri-business and a deep understanding of farmer challenges, he built siddhi vinayank agro M. private limited to bridge the gap between quality seeds and farmers.
               </p>
               <p className="text-muted-foreground mb-4">
                 "Every farmer deserves access to world-class seeds and fair market prices. That's why we brought Carisma potatoes from Netherlands to India and created a complete ecosystem from farm to market."
               </p>
-              <p className="text-sm text-muted-foreground italic">- Rajesh Sharma, Founder</p>
+              <p className="text-sm text-muted-foreground italic">- kuldeep singh rathore, Founder</p>
             </div>
             
             <div className="relative h-[500px] rounded-lg overflow-hidden shadow-2xl">
               <img 
                 src={ownerPhoto} 
-                alt="Founder - Rajesh Sharma" 
+                alt="Founder - kuldeep singh rathore" 
                 className="w-full h-full object-cover"
               />
             </div>

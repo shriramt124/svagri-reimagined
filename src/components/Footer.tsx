@@ -78,7 +78,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center text-sm text-primary-foreground/60">
-          <p>© {new Date().getFullYear()} Siddhivinayak Agri Processing Private Limited. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} siddhi vinayank agro M. private limited. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -65,10 +65,7 @@ const Navbar = () => {
               </div>
               <div className="hidden sm:block">
                 <div className="font-display font-bold text-xl text-foreground">
-                  Siddhi Vinayak
-                </div>
-                <div className="text-xs text-muted-foreground">
-                  Agri Processing Pvt. Ltd.
+                  siddhi vinayank agro M. private limited
                 </div>
               </div>
             </Link>
