@@ -2,49 +2,53 @@ import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Award, TrendingUp, Users, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import heroAgri from "@/assets/hero-agri.jpg";
 import heroEngineering from "@/assets/hero-engineering.jpg";
 import heroIngredients from "@/assets/hero-ingredients.jpg";
 
-const slides = [
-  {
-    image: heroAgri,
-    tag: "Premium Seeds",
-    title: "Year-Round Quality Potatoes",
-    subtitle: "Direct from Netherlands to Your Farm",
-    description: "Get 40% higher yields with Carisma potato seeds. Trusted by 500+ farmers across India.",
-    primaryCta: "Explore Seeds",
-    secondaryCta: "Talk to Expert",
-    link: "/agri-solutions",
-  },
-  {
-    image: heroEngineering,
-    tag: "Engineering Excellence",
-    title: "Complete Food Processing Lines",
-    subtitle: "From Chips to Snacks - We Build It All",
-    description: "State-of-the-art machinery for chips, french fries, and snacks. Turnkey solutions with 24/7 support.",
-    primaryCta: "View Solutions",
-    secondaryCta: "Request Demo",
-    link: "/engineering-solutions",
-  },
-  {
-    image: heroIngredients,
-    tag: "Quality Ingredients",
-    title: "Premium Processing Ingredients",
-    subtitle: "Best Quality for Your Production",
-    description: "Consistent supply of process-grade potatoes and ingredients. Direct partnerships ensuring better prices.",
-    primaryCta: "Browse Ingredients",
-    secondaryCta: "Get Pricing",
-    link: "/ingredient-solutions",
-  },
-];
+const HeroSlider = () => {
+  const { t } = useTranslation();
+  
+  const slides = [
+    {
+      image: heroAgri,
+      tag: t('hero.premiumSeeds'),
+      title: t('hero.yearRoundQuality'),
+      subtitle: t('hero.directFromNetherlands'),
+      description: t('hero.seedsDescription'),
+      primaryCta: t('hero.exploreSeeds'),
+      secondaryCta: t('hero.talkToExpert'),
+      link: "/agri-solutions",
+    },
+    {
+      image: heroEngineering,
+      tag: t('hero.engineeringExcellence'),
+      title: t('hero.completeFoodProcessing'),
+      subtitle: t('hero.fromChipsToSnacks'),
+      description: t('hero.engineeringDescription'),
+      primaryCta: t('hero.viewSolutions'),
+      secondaryCta: t('hero.requestDemo'),
+      link: "/engineering-solutions",
+    },
+    {
+      image: heroIngredients,
+      tag: t('hero.qualityIngredients'),
+      title: t('hero.premiumProcessing'),
+      subtitle: t('hero.bestQuality'),
+      description: t('hero.ingredientsDescription'),
+      primaryCta: t('hero.browseIngredients'),
+      secondaryCta: t('hero.getPricing'),
+      link: "/ingredient-solutions",
+    },
+  ];
 
-const trustBadges = [
-  { icon: Award, text: "ISO Certified" },
-  { icon: Users, text: "500+ Farmers" },
-  { icon: TrendingUp, text: "40% Better Yield" },
-  { icon: Shield, text: "Quality Assured" },
-];
+  const trustBadges = [
+    { icon: Award, text: t('trust.isoCertified') },
+    { icon: Users, text: `500+ ${t('trust.farmers')}` },
+    { icon: TrendingUp, text: `40% ${t('trust.betterYield')}` },
+    { icon: Shield, text: t('trust.qualityAssured') },
+  ];
 
 const HeroSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);

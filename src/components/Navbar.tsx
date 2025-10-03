@@ -2,11 +2,14 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,12 +20,12 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "Agri Solutions", path: "/agri-solutions" },
-    { name: "Engineering Solutions", path: "/engineering-solutions" },
-    { name: "Ingredient Solutions", path: "/ingredient-solutions" },
-    { name: "About Us", path: "/about" },
-    { name: "Insights", path: "/insights" },
+    { name: t('nav.home'), path: "/" },
+    { name: t('nav.agriSolutions'), path: "/agri-solutions" },
+    { name: t('nav.engineeringSolutions'), path: "/engineering-solutions" },
+    { name: t('nav.ingredientSolutions'), path: "/ingredient-solutions" },
+    { name: t('nav.about'), path: "/about" },
+    { name: t('nav.insights'), path: "/insights" },
   ];
 
   return (
@@ -42,7 +45,7 @@ const Navbar = () => {
               </a>
             </div>
             <div className="flex items-center space-x-4">
-              <span>Premium Potato Seeds | Engineering Solutions | Year-round Supply</span>
+              <span>{t('contact.tagline')}</span>
             </div>
           </div>
         </div>
@@ -87,9 +90,10 @@ const Navbar = () => {
               ))}
               <Link to="/contact">
                 <Button className="ml-4 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold shadow-lg">
-                  Get Quote
+                  {t('nav.getQuote')}
                 </Button>
               </Link>
+              <LanguageSwitcher />
             </div>
 
             {/* Mobile Menu Button */}
@@ -123,9 +127,12 @@ const Navbar = () => {
                 ))}
                 <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>
                   <Button className="w-full mt-2 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
-                    Get Quote
+                    {t('nav.getQuote')}
                   </Button>
                 </Link>
+                <div className="mt-2 flex justify-center">
+                  <LanguageSwitcher />
+                </div>
               </div>
             </div>
           )}
