@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Award, TrendingUp, Users, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import heroAgri from "@/assets/hero-agri.jpg";
@@ -9,22 +9,41 @@ import heroIngredients from "@/assets/hero-ingredients.jpg";
 const slides = [
   {
     image: heroAgri,
-    title: "Welcome to Agri Solutions",
-    subtitle: "Find Potatoes All Through the Year!",
+    tag: "Premium Seeds",
+    title: "Year-Round Quality Potatoes",
+    subtitle: "Direct from Netherlands to Your Farm",
+    description: "Get 40% higher yields with Carisma potato seeds. Trusted by 500+ farmers across India.",
+    primaryCta: "Explore Seeds",
+    secondaryCta: "Talk to Expert",
     link: "/agri-solutions",
   },
   {
     image: heroEngineering,
-    title: "Welcome to Engineering Solutions",
-    subtitle: "The Best Food Engineering Solutions",
+    tag: "Engineering Excellence",
+    title: "Complete Food Processing Lines",
+    subtitle: "From Chips to Snacks - We Build It All",
+    description: "State-of-the-art machinery for chips, french fries, and snacks. Turnkey solutions with 24/7 support.",
+    primaryCta: "View Solutions",
+    secondaryCta: "Request Demo",
     link: "/engineering-solutions",
   },
   {
     image: heroIngredients,
-    title: "Welcome to Ingredients Solutions",
-    subtitle: "Best Ingredients Solutions for your Food Processing!",
+    tag: "Quality Ingredients",
+    title: "Premium Processing Ingredients",
+    subtitle: "Best Quality for Your Production",
+    description: "Consistent supply of process-grade potatoes and ingredients. Direct partnerships ensuring better prices.",
+    primaryCta: "Browse Ingredients",
+    secondaryCta: "Get Pricing",
     link: "/ingredient-solutions",
   },
+];
+
+const trustBadges = [
+  { icon: Award, text: "ISO Certified" },
+  { icon: Users, text: "500+ Farmers" },
+  { icon: TrendingUp, text: "40% Better Yield" },
+  { icon: Shield, text: "Quality Assured" },
 ];
 
 const HeroSlider = () => {
@@ -33,7 +52,7 @@ const HeroSlider = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
+    }, 6000);
     return () => clearInterval(timer);
   }, []);
 
@@ -54,57 +73,99 @@ const HeroSlider = () => {
             index === currentSlide ? "opacity-100" : "opacity-0"
           }`}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70 z-10" />
+          {/* Image with overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/85 to-primary/70 z-10" />
           <img
             src={slide.image}
             alt={slide.title}
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 z-20 flex items-center justify-center">
-            <div className="container mx-auto px-4 text-center">
-              <p className="text-accent font-medium text-lg mb-4 animate-fade-in">
-                {slide.subtitle}
-              </p>
-              <h1 className="text-5xl md:text-7xl font-display font-bold text-primary-foreground mb-8 animate-fade-in">
-                {slide.title}
-              </h1>
-              <Link to={slide.link}>
-                <Button
-                  size="lg"
-                  className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-6 text-lg"
-                >
-                  Discover More
-                </Button>
-              </Link>
+          
+          {/* Content */}
+          <div className="absolute inset-0 z-20 flex items-center">
+            <div className="container mx-auto px-4">
+              <div className="max-w-3xl">
+                {/* Tag */}
+                <div className="inline-block bg-accent/20 backdrop-blur-sm border border-accent/50 rounded-full px-4 py-2 mb-6">
+                  <span className="text-accent font-semibold text-sm">{slide.tag}</span>
+                </div>
+                
+                {/* Main Content */}
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-primary-foreground mb-4 leading-tight">
+                  {slide.title}
+                </h1>
+                <p className="text-xl md:text-2xl text-primary-foreground/90 font-medium mb-4">
+                  {slide.subtitle}
+                </p>
+                <p className="text-lg text-primary-foreground/80 mb-8 max-w-2xl">
+                  {slide.description}
+                </p>
+                
+                {/* CTAs */}
+                <div className="flex flex-col sm:flex-row gap-4 mb-12">
+                  <Link to={slide.link}>
+                    <Button
+                      size="lg"
+                      className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-6 text-lg shadow-lg w-full sm:w-auto"
+                    >
+                      {slide.primaryCta}
+                    </Button>
+                  </Link>
+                  <Link to="/contact">
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="border-2 border-primary-foreground/30 bg-background/10 hover:bg-background/20 text-primary-foreground font-semibold px-8 py-6 text-lg backdrop-blur-sm w-full sm:w-auto"
+                    >
+                      {slide.secondaryCta}
+                    </Button>
+                  </Link>
+                </div>
+
+                {/* Trust Badges */}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl">
+                  {trustBadges.map((badge, i) => (
+                    <div key={i} className="flex items-center space-x-2 bg-background/10 backdrop-blur-sm rounded-lg px-4 py-3">
+                      <badge.icon className="w-5 h-5 text-accent" />
+                      <span className="text-sm font-medium text-primary-foreground">{badge.text}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
       ))}
 
+      {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-30 bg-background/20 hover:bg-background/40 backdrop-blur-sm p-2 rounded-full transition-all"
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-30 bg-background/20 hover:bg-accent/80 backdrop-blur-sm p-3 rounded-full transition-all group"
+        aria-label="Previous slide"
       >
-        <ChevronLeft className="w-8 h-8 text-primary-foreground" />
+        <ChevronLeft className="w-6 h-6 text-primary-foreground group-hover:text-accent-foreground" />
       </button>
 
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-30 bg-background/20 hover:bg-background/40 backdrop-blur-sm p-2 rounded-full transition-all"
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-30 bg-background/20 hover:bg-accent/80 backdrop-blur-sm p-3 rounded-full transition-all group"
+        aria-label="Next slide"
       >
-        <ChevronRight className="w-8 h-8 text-primary-foreground" />
+        <ChevronRight className="w-6 h-6 text-primary-foreground group-hover:text-accent-foreground" />
       </button>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex space-x-2">
+      {/* Slide Indicators */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex space-x-3">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all ${
+            className={`h-2 rounded-full transition-all ${
               index === currentSlide
-                ? "bg-accent w-8"
-                : "bg-primary-foreground/50"
+                ? "bg-accent w-12"
+                : "bg-primary-foreground/40 w-2 hover:bg-primary-foreground/60"
             }`}
+            aria-label={`Go to slide ${index + 1}`}
           />
         ))}
       </div>
